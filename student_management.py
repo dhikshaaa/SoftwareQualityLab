@@ -1,8 +1,8 @@
+
 """
 Student management program.
 Demonstrates coding standards and refactoring.
 """
-
 
 class Student:
     """Represents student information."""
@@ -18,6 +18,13 @@ class Student:
         print(f"Age: {self.age}")
         print(f"Mark: {self.mark}")
 
+    def get_result(self):
+        """Return the student's result."""
+        if self.mark >= 50:
+            return "Pass"
+        return "Fail"
+
 
 student = Student("John", 20, 85)
 student.display_details()
+print(f"Result: {student.get_result()}")
